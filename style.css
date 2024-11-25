@@ -1,3 +1,11 @@
+@media screen and (max-width: 768px) {
+    /* Adjustments for mobile screens */
+    .your-element {
+        display: block;
+        width: 100%;
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;

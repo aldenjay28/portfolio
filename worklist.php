@@ -230,7 +230,7 @@
         </div>
     </div>
 
-    <a href="index.php" class="back-link">Back to Home</a>
+    <a href="options.php" class="back-link">Back</a>
 
     <script>
         function openModal(image, description) {
