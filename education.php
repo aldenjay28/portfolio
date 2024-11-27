@@ -12,13 +12,13 @@ echo "<!DOCTYPE html>
 </head>
 <body>
     <div class='education-container'>
-        <header data-aos='fade-down'>
-            <h1>My Educational Background</h1>
+        <header>
+            <h1 data-aos='fade-down'>My Educational Background</h1>
         </header>
         
         <!-- Education Section -->
-        <section class='education-section' data-aos='fade-up'>
-            <div class='education-item' data-aos='fade-right'>
+        <section class='education-section'>
+            <div class='education-item' data-aos='fade-up' data-aos-delay='100'>
                 <i class='fas fa-university education-icon'></i>
                 <div class='education-details'>
                     <p><strong>Bachelor of Science in Information Technology</strong> - ACLC College of Tacloban, SY: 2023-2024</p>
@@ -26,28 +26,28 @@ echo "<!DOCTYPE html>
                 </div>
             </div>
             
-            <div class='education-item' data-aos='fade-right' data-aos-delay='100'>
+            <div class='education-item' data-aos='fade-up' data-aos-delay='200'>
                 <i class='fas fa-laptop-code education-icon'></i>
                 <div class='education-details'>
                     <p><strong>Web Applications Development</strong> - Diploma Program, ACLC College of Tacloban, SY: 2022-2023</p>
                 </div>
             </div>
             
-            <div class='education-item' data-aos='fade-right' data-aos-delay='200'>
+            <div class='education-item' data-aos='fade-up' data-aos-delay='300'>
                 <i class='fas fa-school education-icon'></i>
                 <div class='education-details'>
                     <p><strong>Senior High School:</strong> ACLC College of Tacloban, Real St. Tacloban City, SY: 2019-2020</p>
                 </div>
             </div>
             
-            <div class='education-item' data-aos='fade-right' data-aos-delay='300'>
+            <div class='education-item' data-aos='fade-up' data-aos-delay='400'>
                 <i class='fas fa-chalkboard-teacher education-icon'></i>
                 <div class='education-details'>
                     <p><strong>Junior High School:</strong> Sta. Fe National High School, Sta. Fe, Leyte, SY: 2017-2018</p>
                 </div>
             </div>
             
-            <div class='education-item' data-aos='fade-right' data-aos-delay='400'>
+            <div class='education-item' data-aos='fade-up' data-aos-delay='500'>
                 <i class='fas fa-book-open education-icon'></i>
                 <div class='education-details'>
                     <p><strong>Primary School:</strong> Sta. Fe Central School, Sta. Fe, Leyte, SY: 2010-2011</p>
@@ -56,11 +56,11 @@ echo "<!DOCTYPE html>
         </section>
         
         <!-- Back to Home Link -->
-        <div class='back-link-container' data-aos='fade-up'>
-            <a href='index.php' class='back-link'><i class='fas fa-arrow-left'></i> Back</a>
+        <div class='back-link-container'>
+            <a href='index.php' class='back-link'><i class='fas fa-arrow-left'></i> </a>
         </div>
     </div>
-    
+
     <!-- AOS JS -->
     <script src='https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js'></script>
     <script>
@@ -71,76 +71,104 @@ echo "<!DOCTYPE html>
     </script>
     
     <style>
-        /* Education Container Styling */
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #2b5876, #4e4376);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin: 20px 0;
+            color: #f1c40f;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
         .education-container {
-            max-width: 900px;
-            margin: auto;
+            width: 90%;
+            max-width: 1200px;
             padding: 20px;
-            background-color: #f9f9f9;
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
-        
-        /* Header Styling */
-        header h1 {
-            font-size: 2em;
-            color: #333;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        /* Education Section Styling */
+
+        /* Education Section */
         .education-section {
             margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 20px;
         }
-        
+
         .education-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            background: linear-gradient(to right, #2b5876, #4e4376);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: transform 0.4s, box-shadow 0.4s ease;
         }
-        
+
+        .education-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
         .education-icon {
-            font-size: 2em;
-            color: #76c7c0;
-            margin-right: 20px;
+            font-size: 3em;
+            color: #f1c40f;
+            margin-bottom: 15px;
         }
-        
+
         .education-details p {
             margin: 0;
             font-size: 1.1em;
         }
-        
+
         .education-details strong {
-            color: #333;
+            color: white;
         }
-        
+
         /* Back Link Styling */
         .back-link-container {
             text-align: center;
             margin-top: 20px;
         }
-        
+
         .back-link {
             text-decoration: none;
-            font-size: 1.1em;
+            font-size: 1.2em;
+            padding: 12px 25px;
+            background-color: #f1c40f;
             color: #333;
-            display: inline-flex;
-            align-items: center;
-            transition: color 0.3s ease;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        
-        .back-link i {
-            margin-right: 5px;
-            color: #76c7c0;
-        }
-        
+
         .back-link:hover {
-            color: #76c7c0;
+            background-color: #d4ac0d;
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleUp {
+            from { transform: scale(0.8); }
+            to { transform: scale(1); }
         }
     </style>
 </body>

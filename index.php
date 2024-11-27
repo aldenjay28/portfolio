@@ -189,7 +189,7 @@
         .service-card {
             text-align: center;
             padding: 25px;
-            background-color: #fdfdfd;
+            background-color: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
@@ -242,6 +242,7 @@
         }
     </style>
 </head>
+<script src="//code.tidio.co/fkjqiuqyb2b4glt3dnpqwqneyej8vgi9.js" async></script>
 <body>
     <div class="container">
         <header>

@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f7fc;
+            background: linear-gradient(to right, #2b5876, #4e4376);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -98,6 +98,8 @@
         </div>
     </div>
 
-    <a href="index.php" class="back-link">Back</a>
+    </div>
+        <!-- Back to Home Link -->
+    <a href='index.php' class='back-link' data-aos='fade-up'><i class='fas fa-arrow-left'></i> </a>
 </body>
 </html>

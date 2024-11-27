@@ -11,7 +11,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f6f9;
+            background:  linear-gradient(to right, #2b5876, #4e4376);
             color: #333;
         }
 
@@ -19,7 +19,7 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #ffffff;
+            background-color:rgba(0, 0, 0, 0.3);
             border-radius: 8px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
@@ -112,7 +112,7 @@
             <p><strong>Tip:</strong> Your feedback helps me improve my portfolio and better serve your creative needs!</p>
            
         </div>
-        <a href="index.php" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+        <a href="index.php" class="back-button"><i class="fas fa-arrow-left"></i> </a>
     </div>
 
     <footer data-aos="fade-up">

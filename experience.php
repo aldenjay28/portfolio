@@ -15,7 +15,7 @@ echo "<!DOCTYPE html>
         <header data-aos='fade-down'>
             <h1>My Professional Experience</h1>
         </header>
-        
+
         <section class='timeline-section' data-aos='fade-up'>
             <!-- Timeline Item 1 -->
             <div class='timeline-item' data-aos='fade-right'>
@@ -56,8 +56,9 @@ echo "<!DOCTYPE html>
                 </div>
             </div>
         </section>
+        </div>
 
-        <a href='index.php' class='back-link' data-aos='fade-up'><i class='fas fa-arrow-left'></i> Back</a>
+        <a href='index.php' class='back-link' data-aos='fade-up'><i class='fas fa-arrow-left'></i> </a>
     </div>
 
     <!-- AOS JS -->
@@ -70,14 +71,34 @@ echo "<!DOCTYPE html>
     </script>
 
     <style>
-        /* Main Container Styling */
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #2b5876, #4e4376);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin: 20px 0;
+            color: #f1c40f;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
         .experience-container {
-            max-width: 900px;
-            margin: auto;
+            width: 90%;
+            max-width: 1200px;
             padding: 20px;
-            background-color: #f9f9f9;
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
 
         /* Timeline Section Styling */
@@ -88,7 +109,7 @@ echo "<!DOCTYPE html>
             position: relative;
             padding-left: 40px;
             margin-top: 30px;
-            border-left: 4px solid #76c7c0;
+            border-left: 4px solid #f1c40f;
         }
 
         /* Timeline Item Styling */
@@ -98,25 +119,28 @@ echo "<!DOCTYPE html>
             align-items: flex-start;
             position: relative;
         }
+
         .timeline-icon {
-            background-color: #76c7c0;
+            background-color: orange;
             color: #fff;
-            width: 40px;
-            height: 40px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3em;
+            font-size: 1.5em;
         }
+
         .timeline-content {
-            background-color: #fff;
-            padding: 15px;
+            background: linear-gradient(to right, #2b5876, #4e4376);
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
             width: 100%;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .timeline-content:hover {
             transform: translateX(5px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
@@ -126,13 +150,23 @@ echo "<!DOCTYPE html>
         .back-link {
             display: inline-block;
             margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #f1c40f;
             color: #333;
+            font-weight: bold;
             text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.3s;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .back-link:hover {
-            color: #76c7c0;
+            background-color: #d4ac0d;
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </body>

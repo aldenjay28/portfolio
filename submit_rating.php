@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f6f9;
+            background: linear-gradient(to right, #2b5876, #4e4376);
             color: #333;
         }
 
@@ -64,7 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             max-width: 900px;
             margin: 50px auto;
             padding: 30px;
-            background-color: #fff;
+            background-color: x;
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -96,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         textarea {
-            width: 100%;
+            width: 80%;
             height: 120px;
             padding: 15px;
             margin: 20px 0;
@@ -116,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         button {
-            width: 100%;
+            width: 20%;
             padding: 15px;
             background-color: #0078ff;
             color: white;
@@ -208,7 +209,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit">Submit Rating</button>
         </form>
 
-        <a href="ratings.php" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+        <a href="ratings.php" class="back-button"><i class="fas fa-arrow-left"></i> </a>
     </div>
 
 </body>

@@ -5,201 +5,223 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Alden Jay Centino</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"> <!-- AOS CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
 </head>
 <body>
-    <div class="profile-container">
-        <header data-aos="fade-down">
-            <h1>Welcome to My Profile</h1>
-        </header>
-        
+    <header data-aos="fade-down">
+        <h1>Welcome to My Profile</h1>
+    </header>
+
+    <div class="container">
         <!-- Profile Card -->
-        <div class="profile-card" data-aos="fade-up">
-            <div class="profile-image">
-                <img src="jay.jpg" alt="Alden Jay A. Centino" />
-            </div>
-            <div class="profile-info">
-                <h2>Alden Jay A. Centino</h2>
-                <p><i class="fa-solid fa-birthday-candle"></i> <strong>Birthday:</strong> October 27, 1999</p>
-                <p><i class="fa-solid fa-hourglass-half"></i> <strong>Age:</strong> 25</p>
-                <p><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Brgy Hinapolon, Alangalang, Leyte</p>
-                <p><i class="fa-solid fa-heart-circle-check"></i> <strong>Status:</strong> Single</p>
-                <p><i class="fa-solid fa-person"></i> <strong>Gender:</strong> Male</p>
-            </div>
+        <div class="option-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="jay.jpg" alt="Alden Jay A. Centino">
+            <h3>Alden Jay A. Centino</h3>
+            <p><i class="fa-solid fa-birthday-candle"></i> <strong>Birthday:</strong> October 27, 1999</p>
+            <p><i class="fa-solid fa-hourglass-half"></i> <strong>Age:</strong> 25</p>
+            <p><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Brgy Hinapolon, Alangalang, Leyte</p>
+            <p><i class="fa-solid fa-heart-circle-check"></i> <strong>Status:</strong> Single</p>
+            <p><i class="fa-solid fa-person"></i> <strong>Gender:</strong> Male</p>
         </div>
 
         <!-- Summary Section -->
-        <section class="summary-section" data-aos="fade-up">
-            <h2>Summary</h2>
-            <p>I am a highly skilled IT professional with expertise in graphic design, video editing, and web development. I am dedicated to delivering high-quality multimedia content and innovative web solutions.</p>
-        </section>
+        <div class="option-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Summary</h3>
+            <p>"I am a versatile and highly skilled IT professional with a strong passion for integrating creativity and technology. With a rich background in graphic design, video editing, and web development, I specialize in creating visually captivating content and cutting-edge digital experiences. My expertise lies in delivering high-quality multimedia projects that not only meet but exceed client expectations. Whether it's designing stunning graphics, editing videos with precision, or developing innovative web solutions, I am dedicated to providing exceptional results that drive engagement and bring ideas to life. I thrive on challenges and constantly seek opportunities to push the boundaries of what's possible, ensuring that every project I take on reflects the latest trends, technology, and industry standards."</p>
+        </div>
 
-        <!-- Contact Information -->
-        <section class="contact-section" data-aos="fade-up">
-            <h2>Contact Information</h2>
+        <!-- Contact Section -->
+        <div class="option-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Contact Information</h3>
             <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> aldenjaycentz28@gmail.com</p>
             <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> +63 975 016 5677</p>
             <p><i class="fa-brands fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/alden-jay-centino-3425a5318/" target="_blank">LinkedIn Profile</a></p>
             <p><i class="fa-brands fa-upwork"></i> <strong>Upwork:</strong> <a href="https://www.upwork.com/freelancers/~01fa2297fcb8c62190" target="_blank">Upwork Profile</a></p>
             <p><i class="fa-brands fa-jobstreet"></i> <strong>JobStreet:</strong> <a href="https://ph.jobstreet.com/profile/aldenjay-centino-tFKryKyRwB" target="_blank">JobStreet Profile</a></p>
-        </section>
+        </div>
 
         <!-- Skills Section -->
-        <section class="skills-section" data-aos="fade-up">
-            <h2>Skills</h2>
-            <ul class="skills">
-                <li>
-                    <span>Graphic Design</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 90%;" data-aos="progress"></div>
-                    </div>
-                </li>
-                <li>
-                    <span>Video Editing</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 85%;" data-aos="progress"></div>
-                    </div>
-                </li>
-                <li>
-                    <span>Web Development (HTML/CSS/PHP)</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 80%;" data-aos="progress"></div>
-                    </div>
-                </li>
-            </ul>
-        </section>
+        <div class="option-card" data-aos="fade-up" data-aos-delay="400">
+            <h3>Skills</h3>
+            <div class="skill-bar">
+                <span>Web Development</span>
+                <div class="progress-bar" style="width: 90%;">90%</div>
+            <div class="skill-bar">
+                <span>Graphic Design</span>
+                <div class="progress-bar" style="width: 90%;">90%</div>
+            </div>
+            <div class="skill-bar">
+                <span>Video Editing</span>
+                <div class="progress-bar" style="width: 85%;">85%</div>
+            </div>
+            <div class="skill-bar">
+                <span>Computer Solutions</span>
+                <div class="progress-bar" style="width: 95%;">95%</div>
+            </div>
+            <div class="skill-bar">
+                <span>Network Management</span>
+                <div class="progress-bar" style="width: 85%;">85%</div>
+            </div>
+            </div>
+        </div>
 
         <!-- Hobbies Section -->
-        <section class="hobbies-section" data-aos="fade-up">
-            <h2>Hobbies</h2>
-            <ul class="hobbies">
-                <li class="hobby" data-aos="zoom-in">
-                    <i class="fa-solid fa-motorcycle"></i>
-                    <span>Riding</span>
-                </li>
-                <li class="hobby" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fa-solid fa-camera-retro"></i>
-                    <span>Photography</span>
-                </li>
-                <li class="hobby" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fa-solid fa-headphones"></i>
-                    <span>Music</span>
-                </li>
-            </ul>
-        </section>
+        <div class="option-card" data-aos="fade-up" data-aos-delay="500">
+            <h3>Hobbies</h3>
+            <p><i class="fa-solid fa-code"></i> Coding</p>
+            <p><i class="fa-solid fa-motorcycle"></i> Riding</p>
+            <p><i class="fa-solid fa-camera-retro"></i> Photography</p>
+            <p><i class="fa-solid fa-headphones"></i> Music</p>
+        </div>
 
-        <!-- Download Resume Button -->
-        <section class="download-section" data-aos="fade-up">
-            <a href="Centino, Alden Jay Original CV.pdf" download class="download-button"><i class="fa-solid fa-download"></i> Download Resume</a>
-        </section>
-
-        <!-- Back Link -->
-        <div class="back-link-container" data-aos="fade-up">
-            <a href="index.php" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back</a>
+        <!-- Download Resume -->
+        <div class="option-card" data-aos="zoom-in" data-aos-delay="600">
+            <a href="Centino, Alden Jay Original CV.pdf" download class="button"><i class="fa-solid fa-download"></i> Download Resume</a>
         </div>
     </div>
 
-    <!-- AOS JS -->
+    <div class="back-btn-container" data-aos="fade-up" data-aos-delay="700">
+        <a href="index.php" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000,
-            once: true
+            duration: 1200,
+            once: true,
+            delay: 100,
         });
     </script>
 
-
-
     <style>
-        /* General Profile Container Styling */
-        .profile-container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Profile Card Styling */
-        .profile-card {
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #2b5876, #4e4376);
+            color: #fff;
+            margin: 0;
+            padding: 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 20px;
+            min-height: 100vh;
+            animation: fadeIn 1.5s ease;
         }
-        
-        .profile-image img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+        h1 {
+            font-size: 2.8em;
+            margin: 20px 0;
+            color: #f1c40f;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
-        
-        /* Skills Section */
-        .skills-section {
-            margin-top: 30px;
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 25px;
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
-        .progress {
-            background-color: #e0e0e0;
-            border-radius: 20px;
+
+        .option-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: transform 0.4s, box-shadow 0.4s ease;
             overflow: hidden;
         }
-        .progress-bar {
-            height: 10px;
-            background-color: #76c7c0;
-            border-radius: 20px;
-        }
-        
-        /* Hobbies Section */
-        .hobbies {
-            display: flex;
-            gap: 15px;
-            list-style: none;
-            padding: 0;
-            justify-content: center;
-        }
-        .hobby {
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-        .hobby:hover {
-            transform: scale(1.1);
-        }
-        .hobby-icon {
-            font-size: 2.5em;
-            color: #76c7c0;
-            margin-bottom: 8px;
-        }
-        
-        /* Download Resume Button */
-        .download-button {
-            display: inline-block;
-            padding: 12px 20px;
-            font-size: 1.1em;
-            background-color: #76c7c0;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
-        .download-button:hover {
-            background-color: #5ca6a1;
+
+        .option-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
         }
 
-        /* Back Link */
-        .back-link {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
+        .option-card img {
+            width: 80%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: zoomIn 0.5s ease;
         }
-        .back-link:hover {
-            color: #76c7c0;
+
+        .option-card h3 {
+            font-size: 1.8em;
+            color: #f1c40f;
+            margin-bottom: 10px;
+        }
+
+        .skill-bar {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .skill-bar span {
+            display: block;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+            background: #f1c40f;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .button, .back-btn {
+            padding: 12px 25px;
+            background-color: #f1c40f;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover, .back-btn:hover {
+            background-color: #d4ac0d;
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .option-card img {
+                width: 70%;
+            }
         }
     </style>
 </body>

@@ -6,55 +6,65 @@ echo "<!DOCTYPE html>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Achievements - Alden Jay Centino</title>
-    <link rel='stylesheet' href='style.css'>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css'> <!-- AOS CSS -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'> <!-- Font Awesome -->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css'> <!-- Swiper CSS -->
     <style>
-        /* Achievements Container */
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #2b5876, #4e4376);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin: 20px 0;
+            color: #f1c40f;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
         .achievements-container {
-            max-width: 900px;
-            margin: auto;
+            width: 90%;
+            max-width: 1200px;
             padding: 20px;
-            background-color: #f9f9f9;
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
 
-        /* Header Styling */
-        header h1 {
-            font-size: 2em;
-            color: #333;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        /* Popup Button Styling */
+        /* Popup Button */
         .popup-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #76c7c0;
-            color: white;
-            font-size: 1.2em;
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: #f1c40f;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
             border-radius: 8px;
             cursor: pointer;
-            text-align: center;
-            margin: 20px auto;
-            display: block;
-            width: fit-content;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .popup-button:hover {
-            background-color: #5ba7a3;
+            background-color: #d4ac0d;
+            transform: translateY(-2px);
         }
 
-        /* Modal Styling */
+        /* Modal Styles */
         .modal {
             display: none;
             position: fixed;
-            z-index: 1;
+            z-index: 10;
             left: 0;
             top: 0;
             width: 100%;
@@ -65,28 +75,16 @@ echo "<!DOCTYPE html>
             animation: fadeIn 0.5s ease-in-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
         .modal-content {
-            width: 80%;
-            max-width: 600px;
-            background-color: white;
+            background-color: grey;
             padding: 20px;
             border-radius: 10px;
-            position: relative;
+            max-width: 600px;
+            width: 90%;
             text-align: center;
             animation: scaleUp 0.3s ease-in-out;
         }
 
-        @keyframes scaleUp {
-            from { transform: scale(0.8); }
-            to { transform: scale(1); }
-        }
-
-        /* Image Styling in Modal */
         .modal-content img {
             width: 100%;
             max-width: 300px;
@@ -95,7 +93,6 @@ echo "<!DOCTYPE html>
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Close Button */
         .close {
             position: absolute;
             top: 10px;
@@ -106,15 +103,63 @@ echo "<!DOCTYPE html>
         }
 
         .close:hover {
-            color: #76c7c0;
+            color: #f1c40f;
         }
 
-        /* Swiper Pagination and Buttons */
-        .swiper-pagination {
-            bottom: 10px;
+        /* Achievements Section */
+        .achievements-section {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 20px;
         }
-        .swiper-button-next, .swiper-button-prev {
+
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: transform 0.4s, box-shadow 0.4s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .achievement-icon {
+            font-size: 3em;
+            color: #f1c40f;
+            margin-bottom: 15px;
+        }
+
+        /* Back Link */
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 25px;
+            background-color: #f1c40f;
             color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #d4ac0d;
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleUp {
+            from { transform: scale(0.8); }
+            to { transform: scale(1); }
         }
     </style>
 </head>
@@ -122,23 +167,21 @@ echo "<!DOCTYPE html>
     <div class='achievements-container'>
         <header data-aos='fade-down'>
             <h1>My Achievements</h1>
-            <p>Here are some highlights of my academic and professional accomplishments.</p>
+            <p>Highlights of my academic and professional journey.</p>
         </header>
 
-        <!-- Popup Button -->
         <div class='popup-button' onclick='openModal()'>View Achievements Images</div>
 
-        <!-- Modal Structure -->
         <div id='achievementModal' class='modal'>
             <div class='modal-content'>
                 <span class='close' onclick='closeModal()'>&times;</span>
                 <div class='swiper-container'>
                     <div class='swiper-wrapper'>
-                        <div class='swiper-slide'><img src='1.png' alt='Achievement 1'><div class='image-description'>Proficiency Award in Multimedia for SY 2022-2023</div></div>
-                        <div class='swiper-slide'><img src='2.png' alt='Achievement 2'><div class='image-description'>PC Troubleshooting and Maintenance Awardee</div></div>
-                        <div class='swiper-slide'><img src='3.png' alt='Achievement 3'><div class='image-description'>Proficiency Award in Robotics</div></div>
-                        <div class='swiper-slide'><img src='4.png' alt='Achievement 4'><div class='image-description'>Proficiency Award in Networking</div></div>
-                        <div class='swiper-slide'><img src='5.png' alt='Achievement 5'><div class='image-description'>Proficiency Award in Web Development</div></div>
+                        <div class='swiper-slide'><img src='1.png' alt='Achievement 1'><div>Proficiency Award in Multimedia</div></div>
+                        <div class='swiper-slide'><img src='2.png' alt='Achievement 2'><div>PC Troubleshooting and Maintenance Awardee</div></div>
+                        <div class='swiper-slide'><img src='3.png' alt='Achievement 3'><div>Proficiency Award in Robotics</div></div>
+                        <div class='swiper-slide'><img src='4.png' alt='Achievement 4'><div>Proficiency Award in Networking</div></div>
+                        <div class='swiper-slide'><img src='5.png' alt='Achievement 5'><div>Proficiency Award in Web Development</div></div>
                     </div>
                     <div class='swiper-pagination'></div>
                     <div class='swiper-button-next'></div>
@@ -147,72 +190,45 @@ echo "<!DOCTYPE html>
             </div>
         </div>
 
-        <!-- Achievements Section with Icons -->
         <section class='achievements-section'>
             <div class='achievement-card' data-aos='zoom-in' data-aos-delay='100'>
                 <i class='fas fa-award achievement-icon'></i>
-                <div class='achievement-details'>
-                    <h3>Summa Cum Laude</h3>
-                    <p>Graduated with highest honors in BS Information Technology at ACLC College of Tacloban (2024).</p>
-                </div>
+                <h3>Summa Cum Laude</h3>
+                <p>Graduated with highest honors in BSIT at ACLC College of Tacloban (2024).</p>
             </div>
             <div class='achievement-card' data-aos='zoom-in' data-aos-delay='200'>
                 <i class='fas fa-medal achievement-icon'></i>
-                <div class='achievement-details'>
-                    <h3>Top Performer in Web Development</h3>
-                    <p>Recognized as a top performer in Web Development, specializing in PHP, JAVA, HTML and CSS.</p>
-                </div>
+                <h3>Top Performer in Web Development</h3>
+                <p>Recognized for exceptional web development skills.</p>
             </div>
             <div class='achievement-card' data-aos='zoom-in' data-aos-delay='300'>
                 <i class='fas fa-trophy achievement-icon'></i>
-                <div class='achievement-details'>
-                    <h3>Best Capstone Project</h3>
-                    <p>Developed a digital legacy organizer app that won the Best Capstone Project award (2024).</p>
-                </div>
+                <h3>Outstanding Awardee</h3>
+                <p>TESDA Diploma Program Outstanding Awardee in Web Applications Development (2023).</p>
             </div>
             <div class='achievement-card' data-aos='zoom-in' data-aos-delay='400'>
                 <i class='fas fa-certificate achievement-icon'></i>
-                <div class='achievement-details'>
-                    <h3>Certified Graphic Designer</h3>
-                    <p>Achieved certification  and other graphic design tools, showcasing creativity in digital arts.</p>
-                </div>
+                <h3>Certified Graphic Designer</h3>
+                <p>Showcased creative expertise in digital arts through certification.</p>
             </div>
         </section>
 
-        <!-- Back to Home Link -->
-        <a href='index.php' class='back-link' data-aos='fade-up'><i class='fas fa-arrow-left'></i> Back</a>
+        <a href='index.php' class='back-link'><i class='fas fa-arrow-left'></i> </a>
     </div>
 
-    <!-- AOS JS -->
     <script src='https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js'></script>
-    <!-- Swiper JS -->
     <script src='https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js'></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-
+        AOS.init({ duration: 1200, once: true });
         var swiper = new Swiper('.swiper-container', {
             loop: true,
             speed: 600,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
         });
 
-        function openModal() {
-            document.getElementById('achievementModal').style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('achievementModal').style.display = 'none';
-        }
+        function openModal() { document.getElementById('achievementModal').style.display = 'flex'; }
+        function closeModal() { document.getElementById('achievementModal').style.display = 'none'; }
     </script>
 </body>
 </html>";

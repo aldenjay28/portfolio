@@ -1,5 +1,5 @@
 <?php
-// worklist.php
+// options.php
 
 // Define the image paths
 $images = [
@@ -17,144 +17,154 @@ $images = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work List</title>
     <style>
+        /* Global Styles */
         body {
             font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #2b5876, #4e4376);
+            color: #fff;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            background-color: #f4f7f6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        .header {
+        h1 {
             text-align: center;
-            margin: 30px;
+            font-size: 2.5em;
+            margin: 20px 0;
+            color: #f1c40f;
         }
 
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 30px;
+            width: 90%;
+            max-width: 1200px;
             padding: 20px;
-            justify-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         .option-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
-            margin: 10px;
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            width: 100%;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background-color: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .option-card:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
         }
 
         .option-card img {
-            width: 70%;
-            height: 200px;
+            width: 100%;
+            max-width: 200px;
+            height: 150px;
             object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .option-card img:hover {
-            transform: scale(1.1);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .option-card h3 {
-            font-size: 20px;
-            margin-top: 15px;
-            color: #333;
+            font-size: 1.5em;
+            color: #f1c40f;
+            margin-bottom: 10px;
         }
 
         .option-card p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
+            font-size: 1em;
+            color: #ddd;
+            line-height: 1.5;
             margin-bottom: 15px;
         }
 
         .button {
+            display: inline-block;
             padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            background-color: #f1c40f;
+            color: #333;
             text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .button:hover {
-            background-color: #45a049;
-            transform: translateY(-2px);
-        }
-
-        .back-btn {
-            padding: 10px 20px;
-            background-color: #f44336;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-            display: inline-block;
-            margin-top: 20px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .back-btn:hover {
-            background-color: #d32f2f;
+            background-color: #d4ac0d;
             transform: translateY(-2px);
         }
 
         .back-btn-container {
-            text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f1c40f;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #d4ac0d;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .option-card img {
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
 <body>
-
-    <div class="header">
-        <h1>Work List</h1>
-    </div>
-
+    <h1>Work List</h1>
     <div class="container">
         <div class="option-card">
             <img src="<?php echo $images['layouts']; ?>" alt="Sample Layouts">
             <h3>Layouts</h3>
-            <p>Layouts showcase a variety of design styles, helping clients visualize how their brand could be represented in different formats.</p>
+            <p>Explore a variety of design styles, helping clients visualize how their brand could be represented in different formats.</p>
             <a href="worklist.php" class="button">View Layouts</a>
         </div>
         <div class="option-card">
             <img src="<?php echo $images['video']; ?>" alt="Video Edits">
             <h3>Video Edits</h3>
-            <p>Video edits involve enhancing the visual and auditory elements of videos, such as adding transitions, effects, and improving audio clarity.</p>
+            <p>Enhance videos with transitions, effects, and improved audio clarity for a polished result.</p>
             <a href="video.php" class="button">View Edits</a>
         </div>
         <div class="option-card">
             <img src="<?php echo $images['coding']; ?>" alt="Codings">
             <h3>Codings</h3>
-            <p>Coding tasks cover various programming languages and frameworks, including creating scripts, solving algorithmic problems, and building applications.</p>
+            <p>Delve into programming tasks including scripts, algorithm challenges, and application development.</p>
             <a href="coding.php" class="button">View Codes</a>
         </div>
         <div class="option-card">
             <img src="<?php echo $images['photo']; ?>" alt="Photo Edits">
             <h3>Photo Edits</h3>
-            <p>Photo editing involves adjusting images for improved composition, color correction, cropping, and applying various artistic effects.</p>
+            <p>Adjust images with color corrections, cropping, and artistic effects for stunning results.</p>
             <a href="photo.php" class="button">View Edits</a>
         </div>
     </div>
-
-    <div class="back-btn-container">
-        <a href="index.php" class="back-btn">Back to Home</a>
+    
+    <div class="back-btn-container" data-aos="fade-up" data-aos-delay="700">
+        <a href="index.php" class="back-btn"><i class="fa-solid fa-arrow-left">Back</i></a>
     </div>
 
 </body>
